@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📄 Interactive Resume Builder!</h1>
+
+    <form id="resume-form">
+      <section>
+        <h2>Personal Info</h2>
+        <input type="text" placeholder="Full Name" id="name" required />
+        <input type="email" placeholder="Email" id="email" required />
+        <input type="tel" placeholder="Phone Number" id="phone" required />
+        <textarea id="summary" placeholder="Profile Summary" rows="3"></textarea>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div id="education-section"></div>
+        <button type="button" onclick="addEducation()">➕ Add Education</button>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <div id="experience-section"></div>
+        <button type="button" onclick="addExperience()">➕ Add Experience</button>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <input type="text" id="skills" placeholder="E.g., HTML, CSS, JS" />
+      </section>
+
+      <button type="reset">🔄 Clear Form</button>
+      <button type="button" onclick="downloadPDF()">⬇️ Download as PDF</button>
+    </form>
+
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    <div id="resume-preview">
+      <h2>Live Resume Preview</h2>
+      <div id="preview-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>
